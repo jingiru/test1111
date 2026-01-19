@@ -1,0 +1,174 @@
+/* =========================
+   기본 설정
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
+  background: linear-gradient(180deg, #fff6fb, #f3f8ff);
+  color: #333;
+}
+
+/* =========================
+   레이아웃
+========================= */
+main {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 28px 24px 32px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   타이틀
+========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   입력 영역
+========================= */
+form > div {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff9ecb;
+  box-shadow: 0 0 0 3px rgba(255, 158, 203, 0.25);
+}
+
+/* =========================
+   버튼
+========================= */
+button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #ff9ecb, #ffb7d9);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(255, 158, 203, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(255, 158, 203, 0.4);
+}
+
+/* =========================
+   결과 / 오류 박스
+========================= */
+section {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-radius: 18px;
+}
+
+/* 결과 */
+#resultBox {
+  background: #f7faff;
+  border: 1.5px dashed #bcd6ff;
+}
+
+#resultBox h2 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+dl {
+  margin: 12px 0;
+}
+
+dt {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+dd {
+  margin: 4px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ID 복사 버튼 */
+#copyIdBtn {
+  margin-top: 14px;
+  background: linear-gradient(135deg, #9ecbff, #b7dbff);
+}
+
+/* =========================
+   오류 박스
+========================= */
+#errorBox {
+  background: #fff4f4;
+  border: 1.5px dashed #ffbcbc;
+}
+
+#errorBox h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #d64545;
+}
+
+#errorMsg {
+  font-size: 14px;
+  color: #555;
+}
+
+/* =========================
+   모바일 대응
+========================= */
+@media (max-width: 480px) {
+  main {
+    margin: 20px;
+    padding: 24px 18px;
+  }
+}

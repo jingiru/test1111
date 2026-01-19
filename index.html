@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>우리학교 구글 계정 조회</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main>
+    <h1>우리학교 구글 계정 조회</h1>
+    <p>
+      학번과 이름을 입력한 뒤 검색하세요. (보안을 위해 비밀번호는 화면에 표시하지 않습니다.)
+    </p>
+
+    <!-- 엔터 제출 가능 -->
+    <form id="lookupForm" autocomplete="off">
+      <div>
+        <label for="studentNo">학번</label>
+        <input
+          id="studentNo"
+          name="studentNo"
+          type="text"
+          inputmode="numeric"
+          placeholder="예: 30123"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="studentName">이름</label>
+        <input
+          id="studentName"
+          name="studentName"
+          type="text"
+          placeholder="예: 홍길동"
+          required
+        />
+      </div>
+
+      <button id="searchBtn" type="submit">검색</button>
+    </form>
+
+    <!-- 결과 -->
+    <section id="resultBox" hidden aria-live="polite">
+      <h2>조회 결과</h2>
+      <dl>
+        <dt>구글 계정 ID</dt>
+        <dd id="accountId">-</dd>
+
+        <dt>비밀번호</dt>
+        <dd>보안상 표시되지 않습니다</dd>
+      </dl>
+      <p>
+        비밀번호가 필요한 경우, 관리자에게 비밀번호 재설정(또는 임시 비밀번호 발급)을 요청하세요.
+      </p>
+
+      <button id="copyIdBtn" type="button">ID 복사</button>
+    </section>
+
+    <!-- 오류 -->
+    <section id="errorBox" hidden role="alert">
+      <h2>조회 실패</h2>
+      <p id="errorMsg">-</p>
+    </section>
+  </main>
+
+  <!-- JS는 다음 단계에서 연결 -->
+  <script src="./app.js" defer></script>
+</body>
+</html>
